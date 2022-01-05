@@ -76,7 +76,15 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	
 	
-
+	//>>>>>>>>>>>>>>>>>>>>>>>>>>>GetCost<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+		@Test
+    public void select_item_from_list_should_return_order_cost(){
+            int totalCost;
+            createMockRestaurant();
+            List<String> selectedItemNames = Arrays.asList("Sweet corn soup", "Vegetable lasagne" ) ;
+            totalCost = restaurant.getTotalCost(selectedItemNames) ;
+            assertEquals(388, totalCost);
+    }
 	
 
 	
